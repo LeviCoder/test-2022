@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="pjs-box">
+      <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+    <script>
+      var programCode = function(processingInstance) {
+        with (processingInstance) {
+          size(600, 600);
+          frameRate(60);
+
+          try {
+
+/****************************************** PJS CODE *********************/
+background(0);
+smooth();
+noStroke();
+
+
+
+/****************************************** END OF PJS CODE *********************/
+} catch (e) {
+  println(e);
+}
+        }
+      }
+      var canvas = document.getElementById("canvas");
+      var processingInstance = new Processing(canvas, programCode);
+
+    </script>
+
+  </body>
+</html>

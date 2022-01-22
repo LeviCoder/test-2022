@@ -1,0 +1,14 @@
+
+body {
+  background: #222;
+  color: gray;
+  font-family: 'Press Start 2P', monospace;
+}
+.pjs-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+canvas {
+  border: 10px solid #444444;
+}
