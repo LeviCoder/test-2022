@@ -7,6 +7,24 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    
+
+    <input type="time" id="start" value="10:30">
+    <input type="time" id="end" value="18:30">
+
+    <button id="enter" onclick="foo()">Submit</button>
+
+    <script type="text/javascript">
+      function foo() {
+        let start = document.getElementById("start").value.split(":");
+        let end = document.getElementById("end").value.split(":");
+
+        let mins = (end[0]*60 + ~~end[1]) - (start[0]*60 + ~~start[1]);
+
+
+        console.log(mins);
+        console.log(typeof mins);
+      }
+    </script>
+
   </body>
 </html>
