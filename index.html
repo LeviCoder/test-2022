@@ -8,23 +8,23 @@
   </head>
   <body>
 
+
+    <h3>Enter a start time and end time</h3>
+    from
     <input type="time" id="start" value="10:30">
+    to
     <input type="time" id="end" value="18:30">
+    <br>
+    <input type="date" id="date" value="">
+    <button id="enterTimes" onclick="enterTimes()">Submit</button>
 
-    <button id="enter" onclick="foo()">Submit</button>
+    <h3>or enter a number in hours</h3>
+    <input type="number" id="hours" value="8">
+    <button id="enterHours" onclick="enterHours()">Submit</button>
 
-    <script type="text/javascript">
-      function foo() {
-        let start = document.getElementById("start").value.split(":");
-        let end = document.getElementById("end").value.split(":");
+    <p id="total"></p>
 
-        let mins = (end[0]*60 + ~~end[1]) - (start[0]*60 + ~~start[1]);
-
-
-        console.log(mins);
-        console.log(typeof mins);
-      }
-    </script>
+    <script src="script.js" charset="utf-8"></script>
 
   </body>
 </html>
